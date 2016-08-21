@@ -1,0 +1,45 @@
+.container {
+  max-width:1440px;
+  width:auto;
+  position:relative;
+}
+@media screen and (max-width:1450px){
+  .container {
+    padding-left:2em;
+    padding-right:2em;
+  }
+}
+@media screen and (max-width:550px){
+  .container {
+    padding-left:1em;
+    padding-right:1em;
+  }
+}
+
+/* helpers */
+@mixin blockCenter {
+  display:block;
+  margin-right:auto;
+  margin-left:auto;
+}
+@mixin absoluteFill {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+}
+
+/* Wp Styles */
+img.alignleft {
+  float:left;
+  max-width:50%;
+  display:block;
+  margin:0 1em 1em 0;
+}
+img.alignright {
+  float:right;
+  max-width:50%;
+  display:block;
+  margin:0 0 1em 1em;
+}
