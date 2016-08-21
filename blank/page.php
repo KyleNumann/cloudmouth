@@ -27,7 +27,7 @@
 													<div class="col-sm-20 col-sm-offset-2 col-md-16 col-md-offset-4 col-lg-12 col-lg-offset-6">
 														<?php if(get_sub_field('title')): ?>
 															<a class="page-anchor" name="<?=$id?>"></a>
-															<h2 class="h2 page-section__title text-center mb4"><?php echo get_sub_field('title'); ?></h2>
+															<h2 class="h2 page-section__title mb4"><?php echo get_sub_field('title'); ?></h2>
 														<?php endif; ?>
 														<?php if(get_sub_field('content')): ?>
 															<div class="wysiwyg">

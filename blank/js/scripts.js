@@ -58,8 +58,15 @@ jQuery(function ($) {
 
 	function headerFeaturedImage() {
 		if($('.header-featured-image').length){
-			var hero = $('.header-featured-image');
-			hero.css('height', screenHeight);
+
+      var hero = $('.header-featured-image');
+
+      if(screenWidth > 500){
+        hero.css('height', screenHeight);
+      } else {
+        hero.css('height', screenWidth * 1.6);
+      }
+
 		}
 	}
 	headerFeaturedImage();
@@ -69,7 +76,7 @@ jQuery(function ($) {
     var s = skrollr.init({
       smoothScrolling: false
     });
-    
+
   }
 
   // Lightbox
