@@ -157,26 +157,34 @@ h1, h2, h3, h4, h5 {
 }
 @media (max-width:550px){
   // little bit smaller now, for mobile
+  // scale down headers at bootstrap lg ------------ need to do!
   .h1 {
+    font-size:2.2em;
   }
   .h2 {
+    font-size: 1.8em;
   }
   .h3 {
+    font-size: 1.4em;
   }
   .h4 {
-  }
-  .h5 {
+    font-size: 1.2em;
   }
   .wysiwyg {
     h1 {
+      // font-size:3.9em;
+      font-size:2em;
     }
     h2 {
+      // font-size:2.8em;
+      font-size:1.6em;
     }
     h3 {
+      // font-size:2em;
+      font-size:1.4em;
     }
     h4 {
-    }
-    h5 {
+      font-size:1.2em;
     }
   }
 }
@@ -241,7 +249,14 @@ small {
     color: #fff;
 }
 
-
+@media (max-width:$screen-sm-min){
+  .emphasis {
+    font-size:1.2em;
+  }
+  .emphasis-sm {
+    font-size:1.1em;
+  }
+}
 
 a {
     color: $primaryColor;

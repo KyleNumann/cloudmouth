@@ -8,6 +8,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="<?php bloginfo('description'); ?>">
 
+	<link rel="icon"
+      type="image/png"
+      href="<?php echo get_template_directory_uri(); ?>/img/favicon.png">
+
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic|Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
 	<?php wp_head(); ?>

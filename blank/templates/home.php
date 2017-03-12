@@ -65,6 +65,12 @@
 														<h2 class="h2 page-section__title text-center mb4" id="<?=$id?>"><?php echo get_sub_field('title'); ?></h2>
 													<?php endif; ?>
 
+													<?php if(get_sub_field('content')): ?>
+														<div class="wysiwyg">
+															<?php echo get_sub_field('content'); ?>
+														</div>
+													<?php endif; ?>
+													
 													<div class="row inline-grid">
 														<?php
 															if(get_sub_field('photo_gallery')):

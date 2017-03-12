@@ -1,6 +1,3 @@
-<!--
-	Default Page Template
--->
 
 <?php get_header(); ?>
 
@@ -24,10 +21,22 @@
 										<section class="page-section general-content vpadding-lg">
 											<div class="container">
 												<div class="row">
-													<div class="col-sm-20 col-sm-offset-2 col-md-16 col-md-offset-4 col-lg-12 col-lg-offset-6">
+													<?php
+														// get section width setting and define bootstrap columns
+														$cols = 'col-sm-20 col-sm-offset-2 col-md-16 col-md-offset-4 col-lg-12 col-lg-offset-6';
+														if(get_sub_field('section_width')){
+															if(get_sub_field('section_width') == 'wide'){
+																$cols = 'col-sm-24 col-md-20 col-md-offset-2 col-lg-16 col-lg-offset-4';
+															}
+															if(get_sub_field('section_width') == 'full'){
+																$cols = 'col-sm-24';
+															}
+														}
+													?>
+													<div class="<?=$cols?>">
 														<?php if(get_sub_field('title')): ?>
 															<a class="page-anchor" name="<?=$id?>"></a>
-															<h2 class="h2 page-section__title mb4"><?php echo get_sub_field('title'); ?></h2>
+															<h2 class="h2 page-section__title text-center mb4"><?php echo get_sub_field('title'); ?></h2>
 														<?php endif; ?>
 														<?php if(get_sub_field('content')): ?>
 															<div class="wysiwyg">
@@ -63,6 +72,12 @@
 												<div class="col-sm-24">
 													<?php if(get_sub_field('title')): ?>
 														<h2 class="h2 page-section__title text-center mb4" id="<?=$id?>"><?php echo get_sub_field('title'); ?></h2>
+													<?php endif; ?>
+
+													<?php if(get_sub_field('content')): ?>
+														<div class="wysiwyg">
+															<?php echo get_sub_field('content'); ?>
+														</div>
 													<?php endif; ?>
 
 													<div class="row inline-grid">
